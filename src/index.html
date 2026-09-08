@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build a clear AI task brief for meeting notes, spreadsheet summaries and project updates. Free, open source and offline-capable. No account, AI API or prompt uploads.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="__CSP__">
+  <meta property="og:title" content="Everyday AI Brief | Free, local prompt builder">
+  <meta property="og:description" content="Give AI a clear task, source material and a review checklist. Three worked examples. No signup or API bill.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://filipmarinca.github.io/everyday-ai-brief/">
+  <title>Everyday AI Brief | Free prompt builder for everyday work</title>
+  <style>__STYLES__</style>
+</head>
+<body>
+  <a class="skip-link" href="#brief-form">Skip to the prompt builder</a>
+  <div class="container">
+    <header>
+      <a class="brand" href="./" aria-label="Everyday AI Brief home"><span aria-hidden="true">b</span>Everyday AI Brief</a>
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="https://github.com/filipmarinca/everyday-ai-brief">Source</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div>
+          <div class="eyebrow">A small, free tool for better AI habits</div>
+          <h1 id="title">A clear brief for<br><em>everyday AI work.</em></h1>
+        </div>
+        <div>
+          <p class="intro" data-pretext>Turn an everyday task into a clear prompt with sources, boundaries and a checklist. Then take it to the AI assistant you already use.</p>
+          <div class="privacy-strip">No signup / No AI API / Inputs stay in this page</div>
+        </div>
+      </section>
+      <noscript><p>The builder needs JavaScript. No prompt is sent to an AI service. You can also read the examples in the <a href="https://github.com/filipmarinca/everyday-ai-brief">source repository</a>.</p></noscript>
+      <section class="workbench" aria-label="Interactive AI brief builder">
+        <div class="form-panel">
+          <div class="panel-heading"><h2>Make the task clear</h2><span class="step">01 / THE BRIEF</span></div>
+          <div class="eyebrow">Load a fictional example</div>
+          <div class="examples" role="group" aria-label="Load an example">
+            <button class="example" type="button" data-example="meeting" aria-pressed="true">Meeting follow-up</button>
+            <button class="example" type="button" data-example="spreadsheet" aria-pressed="false">Expense summary</button>
+            <button class="example" type="button" data-example="update" aria-pressed="false">Project update</button>
+          </div>
+          <p class="hint">Examples replace the fields below. Edit them to fit your task.</p>
+          <form id="brief-form">
+            <label for="goal">What needs doing?</label>
+            <textarea id="goal" name="goal" maxlength="2000" rows="2" required autocomplete="off" spellcheck="false"></textarea>
+            <label for="context">Who is it for? <span>Optional context</span></label>
+            <textarea id="context" name="context" maxlength="4000" rows="2" autocomplete="off" spellcheck="false"></textarea>
+            <label for="materials">What can the AI rely on? <span>Notes or source description</span></label>
+            <textarea id="materials" name="materials" maxlength="2500" rows="5" aria-describedby="materials-help" autocomplete="off" spellcheck="false"></textarea>
+            <p id="materials-help" class="hint">Use fictional or redacted material. Do not paste passwords, private client data or confidential files.</p>
+            <label for="format">What should the answer look like?</label>
+            <textarea id="format" name="format" maxlength="1000" rows="2" autocomplete="off" spellcheck="false"></textarea>
+            <p id="form-error" role="alert"></p>
+            <div class="boundaries">
+              <div class="eyebrow">Included in every brief</div>
+              <p>Draft only. No sending, spending or file changes. Missing facts stay missing. Important claims need a source and a human check.</p>
+            </div>
+            <button class="clear" id="clear" type="button">Clear all fields</button>
+          </form>
+        </div>
+        <div class="preview-panel">
+          <div class="panel-heading"><h2>Your ready-to-review prompt</h2><span class="badge">BUILT LOCALLY</span></div>
+          <div id="task-label">Meeting to follow-up</div>
+          <div class="output-paper"><pre id="brief-output" tabindex="0" aria-label="Generated prompt"></pre></div>
+          <div id="privacy-warnings" role="alert" tabindex="-1"></div>
+          <div class="actions">
+            <button id="copy" class="primary" type="button">Copy prompt</button>
+            <button id="download" class="secondary" type="button">Download .txt</button>
+          </div>
+          <p id="status" role="status" aria-live="polite"></p>
+          <p class="hint">This builds a prompt, not an AI answer. It does not call ChatGPT, Claude or Copilot.</p>
+        </div>
+      </section>
+      <section class="learning" id="how-it-works" aria-label="How to use the brief">
+        <div>
+          <h2>Review what comes back.</h2>
+          <p data-pretext>Clear instructions can help. They cannot force an AI model to be correct or replace real permissions. Review the result, double-check calculations and approve consequential actions yourself.</p>
+        </div>
+        <div>
+          <ol>
+            <li>Load an example, then describe one small task.</li>
+            <li>Review the sources and remove private information.</li>
+            <li>Copy the prompt into your preferred AI assistant.</li>
+            <li>Check the answer against the original material before using it.</li>
+          </ol>
+          <a href="https://github.com/filipmarinca/everyday-ai-brief#examples-and-further-learning">More examples and further learning</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>A free, open-source educational project. No accounts, analytics or saved inputs. The hosting provider may process ordinary request logs; the tool itself sends no field contents.</p>
+      <a href="https://github.com/filipmarinca/everyday-ai-brief/releases/latest">Download for offline use</a>
+    </footer>
+  </div>
+  <script>__ENGINE__</script>
+  <script type="module">__PRETEXT__</script>
+  <script>__APP__</script>
+</body>
+</html>
