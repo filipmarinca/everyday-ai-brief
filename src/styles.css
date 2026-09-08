@@ -75,6 +75,12 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; tab-size: 2; font: 12px/1.
 .learning ol { padding-left: 20px; margin: 0; }
 .learning li { padding: 4px 0 4px 6px; }
 .learning a { display: inline-block; min-height: 44px; padding-block: 10px; }
+.course { border-top: 1px solid var(--line); padding: 30px 0 34px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.course h2 { font: 500 27px/1.25 Georgia, serif; margin: 10px 0; letter-spacing: -.5px; }
+.course p { font-size: 14px; line-height: 1.7; max-width: 750px; color: var(--muted); margin: 9px 0; }
+.course p.disclosure { font-size: 12px; max-width: 690px; }
+.course-link { flex-shrink: 0; border: 1px solid var(--green); border-radius: 5px; min-height: 47px; padding: 13px 18px; font-size: 13px; font-weight: 650; text-decoration: none; }
+.course-link:hover { background: var(--lime); }
 footer { border-top: 1px solid var(--line); padding: 24px 0 32px; display: flex; justify-content: space-between; gap: 24px; font-size: 12px; line-height: 1.6; color: var(--muted); }
 footer p { margin: 0; max-width: 610px; }
 noscript p { padding: 20px; border: 1px solid var(--warning); }
@@ -95,6 +101,7 @@ noscript p { padding: 20px; border: 1px solid var(--warning); }
   .preview-panel { border-left: 0; border-top: 1px solid var(--line); }
   .output-paper { max-height: 470px; }
   .learning { grid-template-columns: 1fr; gap: 24px; padding: 32px 0; }
+  .course { flex-direction: column; align-items: flex-start; gap: 12px; }
   footer { flex-direction: column; gap: 12px; }
 }
 @media (max-width: 400px) {
@@ -118,7 +125,7 @@ noscript p { padding: 20px; border: 1px solid var(--warning); }
   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 }
 @media print {
-  header, .hero, .form-panel, .actions, #status, .learning, footer, #privacy-warnings { display: none; }
+  header, .hero, .form-panel, .actions, #status, .learning, .course, footer, #privacy-warnings { display: none; }
   .container, .workbench { width: 100%; display: block; border: 0; }
   .preview-panel, .output-paper { background: white; color: black; border: 0; max-height: none; overflow: visible; padding: 0; }
 }

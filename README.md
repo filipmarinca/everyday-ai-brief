@@ -4,7 +4,7 @@
 
 Turn a task into a brief with source material, a defined output, action boundaries and a review checklist. This is a deterministic educational tool, not an AI service. It does not generate an AI answer or call a model.
 
-[Open the free tool](https://filipmarinca.github.io/everyday-ai-brief/) · [Download the standalone HTML](https://github.com/filipmarinca/everyday-ai-brief/releases/latest)
+[Open the free tool](https://rawcdn.githack.com/filipmarinca/everyday-ai-brief/v1.0.1/docs/index.html) · [Download the standalone HTML](https://github.com/filipmarinca/everyday-ai-brief/releases/latest)
 
 ## What it does
 
@@ -67,7 +67,9 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-The build creates `docs/index.html` and `dist/everyday-ai-brief.html`. Open the standalone file directly for offline use. The live site is a free educational project, not a storefront or paid software service.
+The build creates `docs/index.html` and `dist/everyday-ai-brief.html`. Open the standalone file directly for offline use. The online copy is served from a versioned public GitHack CDN URL, with GitHub Releases as the download fallback. It is a free educational project, not a checkout or paid software service. All payments for the optional course happen on Udemy.
+
+The CDN version is pinned to a release tag. Publish a new tag and update the link when the file changes; never move an existing release tag.
 
 ## Technology and license
 

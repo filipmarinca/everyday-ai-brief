@@ -78,3 +78,13 @@ test("dark mode remains functional", async ({ page }) => {
   await expect(page.locator("#brief-output")).toContainText("TASK");
   await page.screenshot({ path: "test-results/dark.png", fullPage: true });
 });
+
+test("further learning uses the existing disclosed referral link, not a payment form", async ({ page }) => {
+  await page.goto("/");
+  const course = page.getByRole("link", { name: "See course on Udemy" });
+  await expect(course).toHaveAttribute("href", "https://www.udemy.com/course/ai-productivity-for-beginners-safe-prompts-files-agents/?referralCode=24C06640F153438479E2");
+  await expect(course).toHaveAttribute("rel", /sponsored/);
+  await expect(page.locator(".disclosure")).toContainText("instructor's share");
+  await page.getByRole("link", { name: "Everyday AI Brief home" }).click();
+  await expect(page).toHaveURL(/#title$/);
+});
