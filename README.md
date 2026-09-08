@@ -6,6 +6,8 @@ Turn a task into a brief with source material, a defined output, action boundari
 
 [Open the free tool](https://rawcdn.githack.com/filipmarinca/everyday-ai-brief/v1.0.1/docs/index.html) · [Download the standalone HTML](https://github.com/filipmarinca/everyday-ai-brief/releases/latest)
 
+**Hosting notice:** GitHack shows a one-time external-content notice in browsers. Its **Open the page** button opens this repository's tool without an account. The offline download does not use the CDN. The CDN response is marked `noindex`, so the demo is not a standalone search-engine acquisition channel.
+
 ## What it does
 
 - Builds a copyable prompt from your task, context, sources and desired output.
@@ -45,7 +47,7 @@ The repository contains original free exercises, not the course videos or its pa
 
 Inputs stay in the page. There is no backend, analytics, telemetry, browser storage, signup or external font request. The standalone HTML has no runtime network dependencies. Its content-security policy blocks connections and form submissions.
 
-GitHub and other hosting providers may process ordinary page-request logs. Clicking an external link leaves the tool and uses that website's privacy policy. Pasting a brief into an AI service sends it to that service, so remove confidential material first. Local downloads contain the text you entered.
+GitHub and other hosting providers may process ordinary page-request logs and use their own content notices or security/consent cookies. Clicking an external link leaves the tool and uses that website's privacy policy. Pasting a brief into an AI service sends it to that service, so remove confidential material first. Local downloads contain the text you entered.
 
 ## Run locally
 
